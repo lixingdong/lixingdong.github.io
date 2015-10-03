@@ -42,7 +42,7 @@
 <meta name="description" content="李兴东的技术博客">
 <meta property="og:type" content="website">
 <meta property="og:title" content="李兴东的技术博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://lixingdong.xyz/index.html">
 <meta property="og:site_name" content="李兴东的技术博客">
 <meta property="og:description" content="李兴东的技术博客">
 <meta name="twitter:card" content="summary">
@@ -196,88 +196,18 @@
 
       
         
-          <span itemprop="articleBody"><p><em>笔者使用的Windows 64位系统，读者还请注意此事</em></p>
-<h1 id="安装node-js">安装node.js</h1><p>这篇文章<a href="http://www.runoob.com/nodejs/nodejs-install-setup.html" target="_blank" rel="external">node.js安装配置</a>写的十分详细读者可以从这里直接参考。</p>
-<h1 id="安装git_for_windows">安装git for windows</h1><h2 id="安装git">安装git</h2><p><a href="https://git-for-windows.github.io/" target="_blank" rel="external">git for windows</a>下载，笔者使用的是git来更新博客源的，现在github有一个github for windows 的桌面版本，读者也可以从网络上搜寻相关的资料来搭建博客。</p>
-<h2 id="配置git">配置git</h2><p><em>配置git的前提是读者需要有一个github的官方账号（相信有兴趣阅读这篇博客的人都是有的，如果你没有，那么请到<a href="https://github.com/" target="_blank" rel="external">github</a>上面注册一个）</em></p>
-<p>采用如下命令配置用户名：</p>
-<blockquote>
-<p>$ git config –global user.name “your_user_name” (笔者注：这里的username需要填写github的username)</p>
-</blockquote>
-<p>采用如下命令配置用户邮箱：</p>
-<blockquote>
-<p>$ git config –global user.email “your@example.com” (笔者注：同样的，这里需要填写github的注册邮箱)</p>
-<h2 id="生成ssh_key">生成ssh key</h2></blockquote>
-<p>打开git bash，输入以下命令，首先检测本机是否已经生成过ssh key</p>
-<blockquote>
-<p>$ ssh -T git@github.com</p>
-</blockquote>
-<p>如果你看到的结果是：</p>
-<blockquote>
-<p>Hi your_user_name! You’ve successfully authenticated, but GitHub does not provide shell access.</p>
-</blockquote>
-<p>那说明你已经配置过ssh keys ，可以跳过此步骤了。<br>在git bash中输入如下指令来生成新的ssh key：</p>
-<blockquote>
-<p>$ ssh-keygen -t rsa -b 4096 -C “your_email@example.com”</p>
-</blockquote>
-<p>紧接着git bash会询问你是否需要修改存放ssh key的文件夹的位置，如果你想想修改，可以在此处键入你的目的文件夹的位置，笔者建议读者还是不要修改，<strong>直接敲回车键采用默认位置即可</strong> 如下：</p>
-<blockquote>
-<p>Enter file in which to save the key (/Users/you/.ssh/id_rsa): [Press enter] (笔者注：在此处按回车键采用默认存放ssh key的位置即可)</p>
-</blockquote>
-<p>下面，git bash会询问是否需要设置密码，笔者建议<strong>直接敲回车不设密码</strong>，回车连敲两次即可。</p>
-<blockquote>
-<p>Enter passphrase (empty for no passphrase): [Type a passphrase] (笔者注：此处敲击回车)</p>
-<p>Enter same passphrase again: [Type passphrase again] (笔者注：此处第二次敲击回车)</p>
-</blockquote>
-<p>之后的提示，就是给出了新生成的ssh key的默认位置，新生成的ssh key的公钥(yao)。</p>
-<blockquote>
-<p>Your identification has been saved in /Users/you/.ssh/id_rsa.</p>
-<p>Your public key has been saved in /Users/you/.ssh/id_rsa.pub.</p>
-<p>The key fingerprint is:01:0f:f4:3b:ca:85:d6:17:a1:7d:f0:68:9d:f0:a2:db your_email@example.co</p>
-</blockquote>
-<h2 id="配置ssh_key到github">配置ssh key到github</h2><p><em>本机生成新的ssh key之后，还需要把公钥配置到github的网站，这样才能起到作用。</em></p>
-<p>进入到存放公钥的文件夹中（如果你采用的是默认的文件夹，那么路径应该是C:\Users\username.ssh），打开其中的<strong>id_rsa.pub</strong> 文件，复制里面的<strong>全部内容</strong>到剪切板。然后，进入到<a href="http://www.github.com/" target="_blank" rel="external">github官网</a>.从如下路径点击：Settings——&gt;SSH Keys——&gt;Add SSH Keys,在ssh keys页面之中粘贴刚刚拷贝的ssh key到key标题栏中，然后给这一个ssh key起一个名字，笔者的这一个ssh key是从联想G470笔记本中生成的，就命名为了Lenovo G470 Key01 这样的标识很容易看出来是哪一台机器产生的第几个ssh key。</p>
-<p>关于生成和配置ssh keys更加详细的资料请访问<a href="https://help.github.com/articles/generating-ssh-keys/" target="_blank" rel="external">官网</a></p>
-<h1 id="在github上建立仓库">在github上建立仓库</h1><p>这一步其实非常简单，但是也是容易出错的地方，需要读者到github上面建立一个基于自己用户名的仓库，名字的格式必须如下：<strong>yourusername.github.io</strong>，以笔者的为例，笔者在github上的用户名为：lixingdong。所以要建立一个名为：<strong>lixingdong.github.io</strong>的仓库。读者可要注意不要建错了。</p>
-<h1 id="安装hexo">安装hexo</h1><p><em>hexo是一个轻量的简单的博客管理框架，使用hexo管理博客只需要几个命令而已</em></p>
-<h2 id="安装hexo-1">安装hexo</h2><p>打开git bash，（注意，以下操作都是在git bash中进行的）<br>输入如下命令：</p>
-<blockquote>
-<p>cd / (笔者注：git bash打开的时候，默认是在用户user文件下，使用此命令进入c盘)<br>npm install hexo-cli -g (笔者注：这是安装hexo)</p>
-</blockquote>
-<p>上面的npm命令是第一步中安装node.js时产生的，安装的时候是默认会添加到系统路径（path）中去的，如果在git bash中不识别，那就需要手动把npm重新添加到path中，或者直接在cmd窗口中执行此命令。</p>
-<h2 id="部署hexo">部署hexo</h2><p>我们的博客需要有本地的存档，这里我们就暂定为本地博客存放在<strong>C:\Hexo</strong>文件夹下。在git bash中使用cd命令进入到刚刚提到的Hexo文件夹内。</p>
-<blockquote>
-<p>cd C:\Hexo</p>
-</blockquote>
-<p>然后执行，如下命令，安装hexo所需的依赖</p>
-<blockquote>
-<p>hexo init (初始化)<br>npm install (安装所需的依赖，注意这两条命令都是在C:\Hexo文件夹下执行的)</p>
-</blockquote>
-<p>这两步命令之后，Hexo 会自动在目标文件夹建立博客网站所需要的所有文件。</p>
-<h2 id="本地预览">本地预览</h2><p>依然在C:\Hexo文件夹内，输入如下命令：</p>
-<blockquote>
-<p>hexo generate （生成博客所需的文件）</p>
-<p>hexo server （开启本地服务器）</p>
-</blockquote>
-<p>经过这两步之后，就可以使用浏览器打开：<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a> 在本地预览博客了。</p>
-<h1 id="部署到github">部署到github</h1><p>讲了半天，终于进入到了正题了。( ▼-▼ )。<br>进入C:\Hexo文件夹中，打开<strong>_config.yml</strong>文件，在文件末尾输入如下：</p>
-<blockquote>
-<p>deploy:<br>type: git<br>repository: git@github.com:lixingdong/lixingdong.github.io.git<br>branch: master</p>
-</blockquote>
-<p>（笔者注：上面笔者自己的名字读者要参照着换成自己的路径！）</p>
-<h2 id="发布到github">发布到github</h2><p>使用git bash进入到C:\Hexo文件夹中执行如下命令：</p>
-<blockquote>
-<p>hexo clean<br>hexo generate<br>hexo deploy</p>
-</blockquote>
-<p>上面三条命令，直接按字面意义理解即可。</p>
-<h2 id="deploy出错">deploy出错</h2><p>如果在第三条命令的时候出现问题，可能是因为最新的hexo 把发布的deployer和hexo主体程序分开了，我们上面还没有安装deployer程序，在git bash中执行如下命令：</p>
-<blockquote>
-<p>npm install hexo-deployer-git –save</p>
-</blockquote>
-<p>然后再重新执行上面的clean generate 和deploy命令即可。</p>
-<p>如此之后，就可以进入到你的网址上查看新博客了。网址应该是：yourusername.github.io。</p>
-<p>ok，今晚就到这里吧。</p>
-</span>
+          <span itemprop="articleBody">
+            
+            笔者使用的Windows 64位系统，读者还请注意此事
+安装node.js这篇文章node.js安装配置写的十分详细读者可以从这里直接参考。
+安装git for windows安装gitgit for windows下载，笔者使用的是git来更新博客源的，现在github有一个github for 
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/10/02/使用hexo-github搭建个人博客/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
