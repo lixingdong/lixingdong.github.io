@@ -39,23 +39,38 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="水平不够高，仅仅在此记录下我的设计模式读书笔记
+<meta name="description" content="水平不够高，仅仅在此记录下我的设计模式读书笔记，旨在备忘
 1. 策略模式的意图定义一系列的算法，把他们一个个的封装起来，并且使他们可以相互转换。策略模式使得算法可以独立于其客户而变化。类图如下：
-2.适用性">
+2.适用性当存在一下情况时使用策略模式：
+
+许多相关的类仅仅是行为有异。
+需要使用一个算法的不同实体。
+算法使用客户不应该知道的数据。使用策略模式可以避免暴露复杂的、与算法相关的数据结构。
+一个类定义了多">
 <meta property="og:type" content="article">
 <meta property="og:title" content="策略模式笔记">
 <meta property="og:url" content="http://lixingdong.xyz/2015/10/18/策略模式笔记/index.html">
 <meta property="og:site_name" content="李兴东的技术博客">
-<meta property="og:description" content="水平不够高，仅仅在此记录下我的设计模式读书笔记
+<meta property="og:description" content="水平不够高，仅仅在此记录下我的设计模式读书笔记，旨在备忘
 1. 策略模式的意图定义一系列的算法，把他们一个个的封装起来，并且使他们可以相互转换。策略模式使得算法可以独立于其客户而变化。类图如下：
-2.适用性">
-<meta property="og:image" content="https://raw.githubusercontent.com/lixingdong/lixingdong.github.io/master/images/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F%E7%B1%BB%E5%9B%BE.PNG">
-<meta property="og:updated_time" content="2015-10-18T07:24:11.000Z">
+2.适用性当存在一下情况时使用策略模式：
+
+许多相关的类仅仅是行为有异。
+需要使用一个算法的不同实体。
+算法使用客户不应该知道的数据。使用策略模式可以避免暴露复杂的、与算法相关的数据结构。
+一个类定义了多">
+<meta property="og:image" content="https://raw.githubusercontent.com/lixingdong/lixingdong.github.io/master/images/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F.PNG">
+<meta property="og:updated_time" content="2015-10-18T08:23:29.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="策略模式笔记">
-<meta name="twitter:description" content="水平不够高，仅仅在此记录下我的设计模式读书笔记
+<meta name="twitter:description" content="水平不够高，仅仅在此记录下我的设计模式读书笔记，旨在备忘
 1. 策略模式的意图定义一系列的算法，把他们一个个的封装起来，并且使他们可以相互转换。策略模式使得算法可以独立于其客户而变化。类图如下：
-2.适用性">
+2.适用性当存在一下情况时使用策略模式：
+
+许多相关的类仅仅是行为有异。
+需要使用一个算法的不同实体。
+算法使用客户不应该知道的数据。使用策略模式可以避免暴露复杂的、与算法相关的数据结构。
+一个类定义了多">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -218,9 +233,36 @@
       
 
       
-        <span itemprop="articleBody"><p><em>水平不够高，仅仅在此记录下我的设计模式读书笔记</em></p>
-<h1 id="1-_策略模式的意图">1. 策略模式的意图</h1><p>定义一系列的算法，把他们一个个的封装起来，并且使他们可以相互转换。策略模式使得算法可以独立于其客户而变化。类图如下：<br><img src="https://raw.githubusercontent.com/lixingdong/lixingdong.github.io/master/images/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F%E7%B1%BB%E5%9B%BE.PNG" alt="策略模式类图"></p>
-<h1 id="2-适用性">2.适用性</h1></span>
+        <span itemprop="articleBody"><p><em>水平不够高，仅仅在此记录下我的设计模式读书笔记，旨在备忘</em></p>
+<h1 id="1-_策略模式的意图">1. 策略模式的意图</h1><p>定义一系列的算法，把他们一个个的封装起来，并且使他们可以相互转换。策略模式使得算法可以独立于其客户而变化。类图如下：<br><img src="https://raw.githubusercontent.com/lixingdong/lixingdong.github.io/master/images/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F.PNG" alt="策略模式类图"></p>
+<h1 id="2-适用性">2.适用性</h1><p>当存在一下情况时使用策略模式：</p>
+<ul>
+<li>许多相关的类仅仅是行为有异。</li>
+<li>需要使用一个算法的不同实体。</li>
+<li>算法使用客户不应该知道的数据。使用策略模式可以避免暴露复杂的、与算法相关的数据结构。</li>
+<li>一个类定义了多种行为，并且这些行为在这个类的操作中以多个条件语句的形式出现。可以将相关的条件分支移入到他们各自的策略模式类中以代替这些条件语句。</li>
+</ul>
+<h1 id="3-参与者">3.参与者</h1><ul>
+<li><strong>Strategy</strong>    定义所有支持的算法的公共接口。Context使用这个接口来调用某一个ConcreteStrategy定义的算法</li>
+<li><strong>ConcreteStrategy</strong>    具体策略类，实现Strategy接口，提供具体的算法。</li>
+<li><strong>Context</strong>    上下文类，用一个ConcreteStrategy对象来配置；维护一个对Strategy对象的引用；可定义一个接口来让Strategy访问它的数据。</li>
+</ul>
+<h1 id="4-协作">4.协作</h1><ul>
+<li>Strategy和Context相互作用以实现特定的算法。当算法被调用时，Context可以将该算法所需要的所有数据传递给该Strategy。或者，Context可以将自身作为一个参数传递给Strategy作为参数操作。这就让Strategy在需要时可以回掉Context。</li>
+<li>Context将它的客户请求转发给它的Strategy。客户通常创建并传递一个ConcreteStrategy对象给Context；这样，客户仅与Context交互。通常有一系列的ConcreteStrategy类可供客户从中选择。</li>
+</ul>
+<h1 id="5-效果">5.效果</h1><h2 id="优点">优点</h2><ol>
+<li>算法相关系列。Strategy类层次为Context定义了一系列的可供重用的算法或者行为。（注意，行为也可以封装成类！）继承有助于析取出这些算法的公共功能。</li>
+<li>一个替代继承的方法。继承提供了另一种支持多种算法或者行为的方法。你可以直接继承一个Context类，从而给它不同的行为。但这将会把行为硬编码到Context类中，而将算法的实现与Context的实现混合起来，从而使得Context难以理解、难以维护和难以扩展，而且还不能动态的改变算法或者行为。最后你得到一堆相关的类，他们之间唯一的差别在于所使用的算法或者行为。将算法置于独立的Strategy类中使得你可以独立于Context改变它，使得它易于切换（<strong>动态切换</strong>）、易于理解和易于扩展。</li>
+<li>消除了冗长的条件语句。当不同的行为堆砌在同一个类中时，很难避免使用条件语句来选择合适的行为。将行为封装在一个个独立的Strategy中可以消除这些条件语句。</li>
+<li>实现的选择 Strategy模式可以提供相同行为的不同实现。客户可以根据不同时间/空间权衡取舍要求从不同的策略中进行选择。</li>
+</ol>
+<h2 id="缺点">缺点</h2><ol>
+<li>客户必须了解不同的Strategy 每一个客户要选择一个合适的Strategy时就必须要知道这些Strategy到底有何不同。此时就面临不得不向客户暴露具体的实现问题。</li>
+<li>Strategy和Context之间的通信开销 无论各个ConcreteStrategy实现的算法是简单还是复杂，它们都需要共享Strategy定义的接口。因此很可能某些ConcreteStrategy不会都用到通过这个接口传递给它的信息：甚至是有的ConcreteStrategy可能用不到其中的任何信息。这就意味着有时候Context不得不创建和初始化一些永远不会用得到的参数。如果这样，那么将需要在Strategy和Context之间进行更加紧密的耦合。</li>
+<li>增加了对象的数目 Strategy增加了一个应用中的对象数目。有时你可以将Strategy实现为可供各Context共享的无状态的对象来减少这一个开销。任何其余的状态都由Context维护。</li>
+</ol>
+</span>
       
     </div>
 
@@ -374,7 +416,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-_策略模式的意图"><span class="nav-number">1.</span> <span class="nav-text">1. 策略模式的意图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-适用性"><span class="nav-number">2.</span> <span class="nav-text">2.适用性</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-_策略模式的意图"><span class="nav-number">1.</span> <span class="nav-text">1. 策略模式的意图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-适用性"><span class="nav-number">2.</span> <span class="nav-text">2.适用性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-参与者"><span class="nav-number">3.</span> <span class="nav-text">3.参与者</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-协作"><span class="nav-number">4.</span> <span class="nav-text">4.协作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-效果"><span class="nav-number">5.</span> <span class="nav-text">5.效果</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#优点"><span class="nav-number">5.1.</span> <span class="nav-text">优点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#缺点"><span class="nav-number">5.2.</span> <span class="nav-text">缺点</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
